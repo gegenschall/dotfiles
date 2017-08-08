@@ -1,0 +1,35 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 12.5,
+    "editor.rulers": [
+        120
+    ],
+    "editor.fontFamily": "Liberation Mono",
+    "editor.roundedSelection": false,
+    "editor.renderIndentGuides": true,
+    "editor.formatOnPaste": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.cursorBlinking": "solid",
+    "editor.minimap.enabled": false,
+
+    "workbench.colorCustomizations" : {
+        "editor.selectionBackground": "#0b4b5b",
+        "editor.selectionHighlightBackground": "#0b4b5b"
+    },
+
+    "files.trimTrailingWhitespace": true,
+
+    "explorer.openEditors.visible": 0,
+    "explorer.autoReveal": false,
+
+    "python.linting.enabled": false,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorTheme": "Solarized Dark",
+
+    "terminal.integrated.fontFamily": "Liberation Mono for Powerline",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontLigatures": true,
+    "window.zoomLevel": 0
+
+    //"csharp.fallbackDebuggerLinuxRuntimeId": "ubuntu.16.04-x64"
+}

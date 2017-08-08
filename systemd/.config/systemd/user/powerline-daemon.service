@@ -1,0 +1,13 @@
+[Unit]
+Description=Powerline Daemon
+Documentation=man:powerline-daemon(1)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/powerline-daemon --foreground --quiet
+TimeoutSec=5s
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+
