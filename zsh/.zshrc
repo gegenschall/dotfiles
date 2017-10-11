@@ -18,6 +18,8 @@ alias diff='diff --color=auto'
 alias ls=exa
 alias sudo='sudo -E'
 
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+
 export DOCKERCLOUD_USER=gegenschall
 
 if [ -e ~/.secrets ]; then
