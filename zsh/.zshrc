@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/max/.oh-my-zsh
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin:~/.yarn/bin
 
 ZSH_THEME="agnoster"
 DEFAULT_USER="max"
