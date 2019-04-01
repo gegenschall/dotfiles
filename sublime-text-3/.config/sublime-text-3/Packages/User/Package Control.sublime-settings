@@ -5,10 +5,14 @@
 	],
 	"installed_packages":
 	[
-		"Anaconda",
+		"AutoFileName",
 		"Boxy Theme",
+		"Djaneiro",
+		"Django",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"GitGutter",
+		"LSP",
 		"Package Control",
 		"Sass",
 		"SideBarEnhancements",
