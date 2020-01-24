@@ -3,14 +3,10 @@ Description=tmux default session (detached)
 Documentation=man:tmux(1)
 
 [Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/usr/bin/tmux new-session -d -s %H
-ExecStartPost=/usr/bin/tmux set-option -s remain-on-exit on
-ExecStop=/usr/bin/tmux kill-server
-KillMode=none
+Type=forking
+ExecStart=/usr/bin/tmux new-session -s %u -d
+ExecStop=/usr/bin/tmux kill-session -t %u
+Restart=on-failure
 
 [Install]
-WantedBy=default.target
-
-
+WantedBy=multi-user.target
