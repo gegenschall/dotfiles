@@ -1,46 +1,31 @@
 set nocompatible
-
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
-set tabstop=4
-
-set laststatus=2
-
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=/home/max/.vim/bundle/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state('/home/max/.vim/bundle')
-  call dein#begin('/home/max/.vim/bundle')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('/home/max/.vim/bundle/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('altercation/vim-colors-solarized')
+filetype off
   
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
+call plug#begin('~/.vim/plugged')
+  Plug 'tpope/vim-fugitive'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
-" Required:
 filetype plugin indent on
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+set number relativenumber
+"set autoindent
+set backspace=2
+
 syntax enable
+set background=dark
+colorscheme solarized
 
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+set path+=**
+set showmatch
+set wildmode=full
+set wildmenu
 
-"End dein Scripts-------------------------
-
+set mouse=a
