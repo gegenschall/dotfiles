@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=/opt/homebrew/bin:$PATH:~/.local/bin:~/.local/git-fuzzy/bin
+export PATH=/opt/homebrew/bin:~/Library/Python/3.11/bin:$PATH:~/.local/bin:~/.local/git-fuzzy/bin
 
 export EDITOR='vim'
 export COLUMNS="120"
@@ -13,13 +13,14 @@ export COLUMNS="120"
 HISTSIZE=10000000
 SAVEHIST=10000000
 
+autoload -Uz compinit && compinit
+
 # Antigen and plugins
 source /opt/homebrew/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
 #antigen bundle gcloud
-#antigen bundle nvm
 antigen bundle yarn
 antigen bundle fzf
 antigen bundle autojump 
@@ -29,6 +30,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle greymd/docker-zsh-completion
 antigen bundle chitoku-k/fzf-zsh-completions
+antigen bundle cowboyd/zsh-volta --branch=v1
 
 antigen theme romkatv/powerlevel10k
 
@@ -55,5 +57,9 @@ if [ -e ~/.secrets ]; then
   done <~/.secrets
 #  source ~/.secrets
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export VOLTA_FEATURE_PNPM=1
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
