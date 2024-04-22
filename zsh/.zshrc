@@ -5,10 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=/opt/homebrew/bin:~/Library/Python/3.11/bin:$PATH:~/.local/bin:~/.local/git-fuzzy/bin
+export PATH=/opt/homebrew/opt/openjdk/bin:~/.local/bin:/opt/homebrew/bin:$PATH
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export COLUMNS="120"
+export DISABLE_AUTO_TITLE="true"
 
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -23,7 +24,7 @@ antigen use oh-my-zsh
 #antigen bundle gcloud
 antigen bundle yarn
 antigen bundle fzf
-antigen bundle autojump 
+antigen bundle autojump
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
@@ -48,14 +49,16 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75,underline"
 # My alias definitions
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
-alias ls=exa
+alias ls=eza
 alias sudo='sudo -E'
+alias vim=nvim
+
+bindkey -M vicmd v edit-command-line
 
 if [ -e ~/.secrets ]; then
   while read line; do
     export $line
   done <~/.secrets
-#  source ~/.secrets
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
