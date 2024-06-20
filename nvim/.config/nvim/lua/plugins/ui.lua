@@ -1,18 +1,31 @@
 return {
   {
     "folke/noice.nvim",
-    opts = function(_, opts)
-      opts.presets.lsp_doc_border = true
-    end,
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
   },
   {
-    "echasnovski/mini.indentscope",
-    opts = {
-      draw = {
-        animation = function()
-          return 0
+    "stevearc/oil.nvim",
+    opts = {},
+    keys = {
+      {
+        "<leader>fo",
+        function()
+          require("oil").open(LazyVim.root())
         end,
+        desc = "Open Oil (root dir)",
       },
+    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = "moon",
+      dim_inactive = true,
     },
   },
   {
@@ -20,16 +33,29 @@ return {
     opts = {
       options = {
         tab_size = 2,
-        always_show_bufferline = true,
       },
     },
   },
   {
     "neo-tree.nvim",
     opts = function(_, opts)
+      opts.window.mappings = {
+        ["O"] = {
+          function(state)
+            local node = state.tree:get_node()
+            require("oil").open(node.path)
+          end,
+          desc = "open in Oil",
+        },
+      }
       opts.filesystem.filtered_items = {
-        hide_dotfiles = false,
-        hide_gitignored = false,
+        visible = true,
+        never_show = {
+          ".DS_Store",
+          "thumbs.db",
+          "node_modules",
+          ".git",
+        },
       }
     end,
   },
