@@ -16,26 +16,27 @@ SAVEHIST=10000000
 
 autoload -Uz compinit && compinit
 
-# Antigen and plugins
-source /opt/homebrew/share/antigen/antigen.zsh
+source $HOME/.local/share/wezterm/shell-integration.sh
 
-antigen use oh-my-zsh
+# antidote and plugins
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+source <(antidote init)
 
-#antigen bundle gcloud
-antigen bundle yarn
-antigen bundle fzf
-antigen bundle autojump
+antidote bundle ohmyzsh/ohmyzsh path:lib
+antidote bundle ohmyzsh/ohmyzsh path:plugins/yarn
+antidote bundle ohmyzsh/ohmyzsh path:plugins/fzf
+antidote bundle ohmyzsh/ohmyzsh path:plugins/autojump
+# antidote bundle ohmyzsh/ohmyzsh path:plugins/docker
+# antidote bundle ohmyzsh/ohmyzsh path:plugins/docker-compose
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle greymd/docker-zsh-completion
-antigen bundle chitoku-k/fzf-zsh-completions
-antigen bundle cowboyd/zsh-volta --branch=v1
+antidote bundle zsh-users/zsh-syntax-highlighting
+antidote bundle zsh-users/zsh-autosuggestions
+antidote bundle zsh-users/zsh-completions
+antidote bundle greymd/docker-zsh-completion
+antidote bundle chitoku-k/fzf-zsh-completions
+antidote bundle cowboyd/zsh-volta branch:v1
 
-antigen theme romkatv/powerlevel10k
-
-antigen apply
+antidote bundle romkatv/powerlevel10k
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -60,8 +61,6 @@ if [ -e ~/.secrets ]; then
     export $line
   done <~/.secrets
 fi
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export VOLTA_FEATURE_PNPM=1
 export VOLTA_HOME="$HOME/.volta"
