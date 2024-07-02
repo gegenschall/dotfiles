@@ -3,6 +3,7 @@ export PATH=/opt/homebrew/opt/openjdk/bin:~/.local/bin:/opt/homebrew/bin:$PATH
 export EDITOR='nvim'
 export COLUMNS="120"
 export DISABLE_AUTO_TITLE="true"
+export DO_NOT_TRACK=1
 
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -10,6 +11,7 @@ SAVEHIST=10000000
 autoload -Uz compinit && compinit
 
 source $HOME/.local/share/wezterm/shell-integration.sh
+source $HOME/.local/share/pnpm/autocomplete.zsh
 
 # antidote and plugins
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
@@ -32,8 +34,6 @@ antidote bundle cowboyd/zsh-volta branch:v1
 # Make less show pretty colors for things
 export LESSOPEN="| /opt/homebrew/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75,underline"
 
 # My alias definitions
 alias grep='grep --color=auto'
