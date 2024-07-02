@@ -19,6 +19,7 @@ config.window_padding = {
 
 config.native_macos_fullscreen_mode = true
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE|MACOS_FORCE_DISABLE_SHADOW"
+config.window_close_confirmation = "NeverPrompt"
 
 config.audible_bell = "Disabled"
 
