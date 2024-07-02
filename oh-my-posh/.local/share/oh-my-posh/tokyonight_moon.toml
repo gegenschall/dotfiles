@@ -1,0 +1,111 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+shell_integration = true
+pwd = "osc7"
+
+[[blocks]]
+type = "rprompt"
+
+[[blocks.segments]]
+type = "project"
+style = "diamond"
+leading_diamond = ''
+foreground = "p:fg_gutter"
+background = "p:blue"
+template = "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
+
+[[blocks.segments]]
+type = "node"
+style = "diamond"
+leading_diamond = ''
+foreground = "p:fg"
+background = "p:blue7"
+template = " {{ .Full }} "
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+
+[[blocks.segments]]
+type = 'os'
+style = 'diamond'
+powerline_symbol = ''
+foreground = 'p:fg'
+background = 'p:blue7'
+template = ' {{.Icon}} '
+
+[[blocks.segments]]
+type = 'session'
+style = 'diamond'
+powerline_symbol = ''
+foreground = 'p:fg'
+background = 'p:blue7'
+template = '{{ .UserName }}'
+
+[[blocks.segments]]
+type = 'path'
+style = 'powerline'
+powerline_symbol = ''
+foreground = 'p:fg_gutter'
+background = 'p:blue'
+template = ' {{ .Path }}'
+
+[blocks.segments.properties]
+folder_icon = '....'
+home_icon = '~'
+style = 'agnoster_short'
+
+[[blocks.segments]]
+type = 'git'
+style = 'powerline'
+powerline_symbol = ''
+foreground = 'p:fg_gutter'
+background = 'p:blue5'
+template = ' {{ .HEAD }}'
+
+[blocks.segments.properties]
+branch_icon = ' '
+cherry_pick_icon = ' '
+commit_icon = ' '
+fetch_status = false
+fetch_upstream_icon = false
+merge_icon = ' '
+no_commits_icon = ' '
+rebase_icon = ' '
+revert_icon = ' '
+tag_icon = ' '
+
+[palette]
+blue = "#82aaff"
+blue0 = "#3e68d7"
+blue1 = "#65bcff"
+blue2 = "#0db9d7"
+blue5 = "#89ddff"
+blue6 = "#b4f9f8"
+blue7 = "#394b70"
+comment = "#636da6"
+cyan = "#86e1fc"
+dark3 = "#545c7e"
+dark5 = "#737aa2"
+fg = "#c8d3f5"
+fg_dark = "#828bb8"
+fg_gutter = "#3b4261"
+green = "#c3e88d"
+green1 = "#4fd6be"
+green2 = "#41a6b5"
+magenta = "#c099ff"
+magenta2 = "#ff007c"
+orange = "#ff966c"
+purple = "#fca7ea"
+red = "#ff757f"
+red1 = "#c53b53"
+teal = "#4fd6be"
+terminal_black = "#444a73"
+yellow = "#ffc777"
+
+[transient_prompt]
+background = "transparent"
+foreground = "p:blue5"
+template = "\uf0da "

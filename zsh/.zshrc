@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export PATH=/opt/homebrew/opt/openjdk/bin:~/.local/bin:/opt/homebrew/bin:$PATH
 
 export EDITOR='nvim'
@@ -36,11 +29,6 @@ antidote bundle greymd/docker-zsh-completion
 antidote bundle chitoku-k/fzf-zsh-completions
 antidote bundle cowboyd/zsh-volta branch:v1
 
-antidote bundle romkatv/powerlevel10k
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # Make less show pretty colors for things
 export LESSOPEN="| /opt/homebrew/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
@@ -61,6 +49,8 @@ if [ -e ~/.secrets ]; then
     export $line
   done <~/.secrets
 fi
+
+eval "$(oh-my-posh init zsh --config ~/.local/share/oh-my-posh/tokyonight_moon.toml)"
 
 export VOLTA_FEATURE_PNPM=1
 export VOLTA_HOME="$HOME/.volta"
