@@ -12,6 +12,7 @@ autoload -Uz compinit && compinit
 
 source $HOME/.local/share/wezterm/shell-integration.sh
 source $HOME/.local/share/pnpm/autocomplete.zsh
+source $HOME/.local/share/docker/autocomplete.zsh
 
 # antidote and plugins
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
@@ -21,8 +22,6 @@ antidote bundle ohmyzsh/ohmyzsh path:lib
 antidote bundle ohmyzsh/ohmyzsh path:plugins/yarn
 antidote bundle ohmyzsh/ohmyzsh path:plugins/fzf
 antidote bundle ohmyzsh/ohmyzsh path:plugins/autojump
-# antidote bundle ohmyzsh/ohmyzsh path:plugins/docker
-# antidote bundle ohmyzsh/ohmyzsh path:plugins/docker-compose
 
 antidote bundle zsh-users/zsh-syntax-highlighting
 antidote bundle zsh-users/zsh-autosuggestions
