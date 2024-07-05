@@ -8,20 +8,6 @@ return {
     },
   },
   {
-    "stevearc/oil.nvim",
-    opts = {},
-    keys = {
-      {
-        "<leader>fo",
-        function()
-          require("oil").open(LazyVim.root())
-        end,
-        desc = "Open Oil (root dir)",
-      },
-    },
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
     "folke/tokyonight.nvim",
     opts = {
       style = "moon",
