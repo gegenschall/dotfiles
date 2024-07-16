@@ -1,4 +1,5 @@
 export PATH=/opt/homebrew/opt/openjdk/bin:~/.local/bin:/opt/homebrew/bin:$PATH
+export PATH=~/.local/share/bob/nvim-bin:$PATH
 
 export EDITOR='nvim'
 export COLUMNS="120"
@@ -13,6 +14,7 @@ autoload -Uz compinit && compinit
 source $HOME/.local/share/wezterm/shell-integration.sh
 source $HOME/.local/share/pnpm/autocomplete.zsh
 source $HOME/.local/share/docker/autocomplete.zsh
+source $HOME/.local/share/bob/autocomplete.zsh
 
 # antidote and plugins
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
