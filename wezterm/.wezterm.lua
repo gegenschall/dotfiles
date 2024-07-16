@@ -23,10 +23,17 @@ config.window_close_confirmation = "NeverPrompt"
 
 config.audible_bell = "Disabled"
 
+config.enable_kitty_keyboard = true
+
 config.keys = {
 	-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
 	{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
 	-- Make Option-Right equivalent to Alt-f; forward-word
 	{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
+	-- Make Cmd-Left be Home
+	{ key = "LeftArrow", mods = "CMD", action = wezterm.action({ SendString = "\x1bOH" }) },
+	-- Make Cmd-Right be End
+	{ key = "RightArrow", mods = "CMD", action = wezterm.action({ SendString = "\x1bOF" }) },
 }
+
 return config
