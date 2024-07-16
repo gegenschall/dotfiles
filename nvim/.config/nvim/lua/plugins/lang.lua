@@ -14,6 +14,7 @@ return {
               suggest = {
                 includeCompletionsForModuleExports = true,
                 includeCompletionsForImportStatements = true,
+                completeFunctionCalls = false,
               },
             },
           },
