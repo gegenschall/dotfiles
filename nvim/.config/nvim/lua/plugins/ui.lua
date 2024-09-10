@@ -4,6 +4,8 @@ return {
     opts = {
       presets = {
         lsp_doc_border = true,
+        bottom_search = false,
+        inc_rename = true,
       },
     },
   },
@@ -19,6 +21,7 @@ return {
     opts = {
       options = {
         tab_size = 2,
+        separator_style = "slant",
       },
     },
   },

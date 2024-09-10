@@ -1,14 +1,5 @@
 return {
   {
-    "folke/noice.nvim",
-    opts = {
-      presets = {
-        bottom_search = false,
-        inc_rename = true,
-      },
-    },
-  },
-  {
     "johmsalas/text-case.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
@@ -31,5 +22,16 @@ return {
     -- has to be loaded on startup. Otherwise, the interactive feature of the `Subs` will only be
     -- available after the first executing of it or after a keymap of text-case.nvim has been used.
     lazy = false,
+  },
+  {
+    "Wansmer/treesj",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      use_default_keymaps = false,
+    },
+    keys = {
+      { "<leader>cJ", "<cmd>TSJToggle <cr>", desc = "Toggle Join (TreeSJ)" },
+    },
+    lazy = true,
   },
 }
