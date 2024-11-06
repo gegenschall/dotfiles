@@ -28,15 +28,6 @@ return {
   {
     "neo-tree.nvim",
     opts = function(_, opts)
-      opts.window.mappings = {
-        ["O"] = {
-          function(state)
-            local node = state.tree:get_node()
-            require("oil").open(node.path)
-          end,
-          desc = "open in Oil",
-        },
-      }
       opts.filesystem.filtered_items = {
         visible = true,
         never_show = {

@@ -4,9 +4,6 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       servers = {
-        ts_ls = {
-          enabled = false,
-        },
         vtsls = {
           settings = {
             typescript = {
