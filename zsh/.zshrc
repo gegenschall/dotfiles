@@ -16,6 +16,10 @@ fi
 
 autoload -Uz compinit && compinit
 
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
 source $HOME/.local/share/wezterm/shell-integration.sh
 source $HOME/.local/share/pnpm/autocomplete.zsh
 source $HOME/.local/share/docker/autocomplete.zsh
