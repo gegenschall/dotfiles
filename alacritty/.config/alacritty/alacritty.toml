@@ -1,0 +1,73 @@
+[window]
+decorations = "Full"
+option_as_alt = "Both"
+
+[font]
+normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
+size = 14
+
+# Broken - Not sure why
+# [[keyboard.bindings]]
+# key = "ArrowLeft"
+# mods = "Command"
+# chars = "\u001bOH"
+#
+# [[keyboard.bindings]]
+# key = "ArrowRight"
+# mods = "Command"
+# chars = "\u001bOF"
+
+[[keyboard.bindings]]
+key = "ArrowLeft"
+mods = "Option"
+chars = "\u001bB"
+
+[[keyboard.bindings]]
+key = "ArrowRight"
+mods = "Option"
+chars = "\u001bF"
+
+[colors]
+# transparent_background_colors = true
+# draw_bold_text_with_bright_colors = true
+
+# TokyoNight Alacritty Colors
+# Default colors
+[colors.primary]
+background = '#222436'
+foreground = '#c8d3f5'
+
+[colors.cursor]
+cursor = '#c8d3f5'
+text = '#222436'
+
+# Normal colors
+[colors.normal]
+black = '#1b1d2b'
+red = '#ff757f'
+green = '#c3e88d'
+yellow = '#ffc777'
+blue = '#82aaff'
+magenta = '#c099ff'
+cyan = '#86e1fc'
+white = '#828bb8'
+
+# Bright colors
+[colors.bright]
+black = '#444a73'
+red = '#ff757f'
+green = '#c3e88d'
+yellow = '#ffc777'
+blue = '#82aaff'
+magenta = '#c099ff'
+cyan = '#86e1fc'
+white = '#c8d3f5'
+
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '#ff966c'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#c53b53'
