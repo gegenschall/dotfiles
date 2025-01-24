@@ -3,6 +3,3 @@ vim.keymap.set("n", "<leader>fgg", function()
 end)
 
 vim.keymap.set("n", "<leader>cL", "<cmd>LspRestart<cr>")
--- vim.keymap.set("n", "<Enter>", function()
---   vim.fn.append(vim.fn.line("."), "")
--- end)

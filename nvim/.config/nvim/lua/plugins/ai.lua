@@ -1,16 +1,24 @@
 return {
-  {
-    "frankroeder/parrot.nvim",
-    dependencies = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" },
-    keys = {
-      { "<leader>ac", "<cmd>PrtImplement<cr>", mode = { "v" }, desc = "Ask Parrot to implement" },
-    },
-    opts = {
-      providers = {
-        openai = {
-          api_key = os.getenv("OPENAI_API_KEY"),
-        },
+  "yetone/avante.nvim",
+  build = "make",
+  event = "VeryLazy",
+  lazy = false,
+  opts = {
+    provider = "openai",
+  },
+  dependencies = {
+    "stevearc/dressing.nvim",
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
+    "echasnovski/mini.icons",
+    -- "zbirenbaum/copilot.lua", -- for providers='copilot'
+    {
+      -- Make sure to set this up properly if you have lazy=true
+      "MeanderingProgrammer/render-markdown.nvim",
+      opts = {
+        file_types = { "markdown", "Avante" },
       },
+      ft = { "markdown", "Avante" },
     },
   },
 }

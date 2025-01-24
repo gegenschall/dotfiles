@@ -4,9 +4,8 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
-      kind_icons = LazyVim.config.icons.kinds,
-      windows = {
-        autocomplete = {
+      completion = {
+        menu = {
           draw = {
             columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
           },

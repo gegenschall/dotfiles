@@ -3,7 +3,6 @@ return {
     "sphamba/smear-cursor.nvim",
     opts = {
       smear_between_neighbor_lines = false,
-      legacy_computing_symbols_support = true,
     },
   },
   {
@@ -47,20 +46,18 @@ return {
     end,
   },
   {
-    "s1n7ax/nvim-window-picker",
-    -- name = 'window-picker',
-    event = "VeryLazy",
-    version = "2.*",
-    config = function()
-      require("window-picker").setup({
-        hint = "floating-big-letter",
-      })
-    end,
-  },
-  {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       opts.sections.lualine_z = nil
     end,
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      scroll = { enabled = false },
+      indent = {
+        animate = { enabled = false },
+      },
+    },
   },
 }
