@@ -10,9 +10,17 @@ config.font_size = 14
 config.underline_position = -3
 
 config.enable_tab_bar = false
+config.window_padding = {
+	left = 0,
+	right = 0,
+	-- top = 64,
+	top = 0,
+	bottom = 0,
+}
 
 config.native_macos_fullscreen_mode = true
 config.window_decorations = "TITLE|RESIZE|MACOS_FORCE_DISABLE_SHADOW"
+-- config.window_decorations = "INTEGRATED_BUTTONS|RESIZE|MACOS_FORCE_DISABLE_SHADOW"
 config.window_close_confirmation = "NeverPrompt"
 
 config.audible_bell = "Disabled"
