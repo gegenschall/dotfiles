@@ -4,7 +4,7 @@ option_as_alt = "Both"
 
 [font]
 normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
-size = 14
+size = 15
 
 # Broken - Not sure why
 # [[keyboard.bindings]]
