@@ -1,5 +1,15 @@
 return {
   {
+    "hedyhli/markdown-toc.nvim",
+    ft = "markdown",
+    cmd = { "Mtoc" },
+    opts = {
+      headings = {
+        before_toc = true,
+      },
+    },
+  },
+  {
     "johmsalas/text-case.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
