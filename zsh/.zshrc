@@ -1,9 +1,9 @@
-export PATH=/opt/homebrew/opt/openjdk/bin:~/.local/bin:/opt/homebrew/bin:$PATH
+export PATH=~/.local/bin:$PATH
 export PATH=~/.local/share/bob/nvim-bin:$PATH
+export PATH=/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:$PATH
 
 export EDITOR='nvim'
 export COLUMNS="120"
-export DISABLE_AUTO_TITLE="true"
 export DO_NOT_TRACK=1
 
 HISTSIZE=10000000
@@ -20,6 +20,8 @@ export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
 
+source <(fzf --zsh)
+
 # antidote and plugins
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 source <(antidote init)
@@ -27,6 +29,7 @@ source <(antidote init)
 antidote bundle ohmyzsh/ohmyzsh path:lib
 antidote bundle ohmyzsh/ohmyzsh path:plugins/yarn
 antidote bundle ohmyzsh/ohmyzsh path:plugins/fzf
+antidote bundle ohmyzsh/ohmyzsh path:plugins/aws
 
 antidote bundle zsh-users/zsh-syntax-highlighting
 antidote bundle zsh-users/zsh-autosuggestions
@@ -36,7 +39,7 @@ antidote bundle chitoku-k/fzf-zsh-completions
 antidote bundle cowboyd/zsh-volta branch:v1
 
 # Make less show pretty colors for things
-export LESSOPEN="| /opt/homebrew/bin/src-hilite-lesspipe.sh %s"
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS="-R"
 
 # My alias definitions
