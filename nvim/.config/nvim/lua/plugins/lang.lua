@@ -4,6 +4,16 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       servers = {
+        tailwindcss = {
+          filetypes_include = { "templ" },
+        },
+        gopls = {
+          settings = {
+            gopls = {
+              completeFunctionCalls = false,
+            },
+          },
+        },
         vtsls = {
           settings = {
             typescript = {

@@ -32,20 +32,6 @@ return {
     },
   },
   {
-    "neo-tree.nvim",
-    opts = function(_, opts)
-      opts.filesystem.filtered_items = {
-        visible = true,
-        never_show = {
-          ".DS_Store",
-          "thumbs.db",
-          "node_modules",
-          ".git",
-        },
-      }
-    end,
-  },
-  {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       opts.sections.lualine_z = nil
