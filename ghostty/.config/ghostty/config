@@ -1,0 +1,8 @@
+font-family = "Iosevka Term"
+font-size = 15
+
+theme = tokyonight_moon
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
