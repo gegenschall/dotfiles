@@ -65,3 +65,6 @@ eval "$(zoxide init zsh)"
 export VOLTA_FEATURE_PNPM=1
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun completions
+[ -s "/Users/max/.bun/_bun" ] && source "/Users/max/.bun/_bun"
