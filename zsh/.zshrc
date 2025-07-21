@@ -1,10 +1,13 @@
 export PATH=~/.local/bin:$PATH
 export PATH=~/.local/share/bob/nvim-bin:$PATH
 export PATH=/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 export EDITOR='nvim'
 export COLUMNS="120"
 export DO_NOT_TRACK=1
+
+export GPG_TTY=$(tty)
 
 HISTSIZE=10000000
 SAVEHIST=10000000
