@@ -1,5 +1,6 @@
 font-family = "Iosevka Term"
 font-size = 15
+font-feature = -calt, -liga, -dlig
 
 theme = tokyonight_moon
 
