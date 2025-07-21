@@ -7,6 +7,10 @@ return {
         tailwindcss = {
           filetypes_include = { "templ" },
         },
+        biome = {
+          -- TODO: this should fallback to just biome
+          cmd = { "./node_modules/.bin/biome", "lsp-proxy" },
+        },
         gopls = {
           settings = {
             gopls = {

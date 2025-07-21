@@ -8,3 +8,4 @@ vim.opt.conceallevel = 2
 vim.g.lazyvim_picker = "snacks"
 
 vim.g.lazyvim_eslint_auto_format = true
+vim.g.lazyvim_prettier_needs_config = true

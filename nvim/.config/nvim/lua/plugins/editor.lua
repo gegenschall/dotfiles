@@ -1,5 +1,18 @@
 return {
   {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        formatters = {
+          file = {
+            filename_first = true,
+            truncate = 100,
+          },
+        },
+      },
+    },
+  },
+  {
     "hedyhli/markdown-toc.nvim",
     ft = "markdown",
     cmd = { "Mtoc" },
