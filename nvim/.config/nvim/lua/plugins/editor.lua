@@ -52,4 +52,15 @@ return {
     },
     lazy = true,
   },
+  {
+    "hedyhli/outline.nvim",
+    opts = {
+      keymaps = {
+        close = "q",
+        hover_symbol = "K",
+        toggle_preview = "P",
+        fold_toggle = "C",
+      },
+    },
+  },
 }
