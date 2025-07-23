@@ -3,6 +3,9 @@ return {
     "folke/snacks.nvim",
     opts = {
       picker = {
+        -- exclude = {
+        --   "apis/",
+        -- },
         formatters = {
           file = {
             filename_first = true,
