@@ -45,17 +45,6 @@ return {
     lazy = false,
   },
   {
-    "Wansmer/treesj",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {
-      use_default_keymaps = false,
-    },
-    keys = {
-      { "<leader>cJ", "<cmd>TSJToggle <cr>", desc = "Toggle Join (TreeSJ)" },
-    },
-    lazy = true,
-  },
-  {
     "hedyhli/outline.nvim",
     opts = {
       keymaps = {
