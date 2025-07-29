@@ -8,6 +8,7 @@ export COLUMNS="120"
 export DO_NOT_TRACK=1
 
 export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
 
 HISTSIZE=10000000
 SAVEHIST=10000000
