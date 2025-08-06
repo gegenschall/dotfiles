@@ -21,10 +21,6 @@ return {
         vtsls = {
           settings = {
             typescript = {
-              preferences = {
-                importModuleSpecifier = "relative",
-                importModuleSpecifierEnding = "minimal",
-              },
               suggest = {
                 includeCompletionsForModuleExports = true,
                 includeCompletionsForImportStatements = true,
