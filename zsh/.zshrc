@@ -51,7 +51,6 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ls=eza
 alias sudo='sudo -E'
-alias vim=nvim
 alias j=z
 alias staplehorse='pwgen -cnyB 16 4'
 
