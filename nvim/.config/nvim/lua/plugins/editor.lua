@@ -1,5 +1,42 @@
 return {
   {
+    "gbprod/substitute.nvim",
+    opts = {
+      on_substitute = require("yanky.integration").substitute(),
+    },
+    keys = {
+      {
+        "<leader>r",
+        function()
+          require("substitute").operator()
+        end,
+        desc = "Substitute",
+      },
+      {
+        "<leader>rr",
+        function()
+          require("substitute").line()
+        end,
+        desc = "Substitute (line)",
+      },
+      {
+        "<leader>R",
+        function()
+          require("substitute").eol()
+        end,
+        desc = "Substitute (end of line)",
+      },
+      {
+        "<leader>",
+        function()
+          require("substitute").visual()
+        end,
+        mode = "x",
+        desc = "Substitute",
+      },
+    },
+  },
+  {
     "folke/snacks.nvim",
     opts = {
       picker = {
