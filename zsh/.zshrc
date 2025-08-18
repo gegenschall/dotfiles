@@ -13,6 +13,10 @@ gpgconf --launch gpg-agent
 HISTSIZE=10000000
 SAVEHIST=10000000
 
+function zvm_config() {
+  ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+}
+
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -29,6 +33,8 @@ source <(fzf --zsh)
 # antidote and plugins
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 source <(antidote init)
+
+antidote bundle jeffreytse/zsh-vi-mode
 
 antidote bundle ohmyzsh/ohmyzsh path:lib
 antidote bundle ohmyzsh/ohmyzsh path:plugins/yarn
