@@ -34,12 +34,11 @@ source <(fzf --zsh)
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 source <(antidote init)
 
-antidote bundle jeffreytse/zsh-vi-mode
-
 antidote bundle ohmyzsh/ohmyzsh path:lib
 antidote bundle ohmyzsh/ohmyzsh path:plugins/yarn
 antidote bundle ohmyzsh/ohmyzsh path:plugins/fzf
 antidote bundle ohmyzsh/ohmyzsh path:plugins/aws
+antidote bundle ohmyzsh/ohmyzsh path:plugins/vi-mode
 
 antidote bundle zsh-users/zsh-syntax-highlighting
 antidote bundle zsh-users/zsh-autosuggestions
@@ -60,7 +59,8 @@ alias sudo='sudo -E'
 alias j=z
 alias staplehorse='pwgen -cnyB 16 4'
 
-bindkey -M vicmd v edit-command-line
+export VI_MODE_SET_CURSOR=true
+bindkey -v
 
 if [ -e ~/.secrets ]; then
   while read line; do
