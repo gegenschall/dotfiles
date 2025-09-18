@@ -1,5 +1,19 @@
 return {
   {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        dotenv = { "dotenv_linter" },
+      },
+      formatters = {
+        dotenv_linter = {
+          command = "dotenv-linter",
+          args = { "fix", "--no-color", "$FILENAME", "--no-backup" },
+        },
+      },
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },

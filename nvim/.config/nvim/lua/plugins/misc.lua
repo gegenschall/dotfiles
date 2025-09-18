@@ -8,4 +8,11 @@ return {
       { "<leader>Gh", "<cmd>Golf hard<cr>", desc = "Golf (hard)" },
     },
   },
+  {
+    "tris203/precognition.nvim",
+    opts = {},
+    keys = {
+      { "<leader>uP", "<cmd>Precognition toggle<cr>", desc = "Precognition (toggle)" },
+    },
+  },
 }

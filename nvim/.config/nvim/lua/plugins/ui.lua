@@ -25,9 +25,10 @@ return {
   {
     "akinsho/bufferline.nvim",
     opts = {
-      options = {
-        tab_size = 2,
-        separator_style = "slant",
+      highlights = {
+        fill = {
+          bg = "none",
+        },
       },
     },
   },
@@ -44,6 +45,32 @@ return {
       indent = {
         animate = { enabled = false },
       },
+      picker = {
+        sources = {
+          explorer = {
+            layout = {
+              preview = "main",
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {
+      keymaps = {
+        ["<m-h>"] = { "actions.toggle_hidden", mode = "n" },
+      },
+    },
+    dependencies = {
+      { "nvim-mini/mini.icons", opts = {} },
+    },
+    lazy = false,
+    keys = {
+      { "<leader>fo", "<cmd>Oil<cr>", desc = "Open oil.nvim" },
     },
   },
 }
