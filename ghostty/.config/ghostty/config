@@ -4,7 +4,8 @@ font-family = "Iosevka Term"
 font-size = 15
 font-feature = -calt, -liga, -dlig
 
-theme = tokyonight_moon
+theme = TokyoNight Moon
+custom-shader = cursor-blaze.glsl
 
 cursor-style = block
 cursor-style-blink = false
