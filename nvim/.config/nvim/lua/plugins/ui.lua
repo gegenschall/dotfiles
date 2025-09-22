@@ -56,21 +56,4 @@ return {
       },
     },
   },
-  {
-    "stevearc/oil.nvim",
-    ---@module 'oil'
-    ---@type oil.SetupOpts
-    opts = {
-      keymaps = {
-        ["<m-h>"] = { "actions.toggle_hidden", mode = "n" },
-      },
-    },
-    dependencies = {
-      { "nvim-mini/mini.icons", opts = {} },
-    },
-    lazy = false,
-    keys = {
-      { "<leader>fo", "<cmd>Oil<cr>", desc = "Open oil.nvim" },
-    },
-  },
 }
