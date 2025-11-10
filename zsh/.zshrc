@@ -15,6 +15,7 @@ SAVEHIST=10000000
 
 function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+  ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 }
 
 if type brew &>/dev/null
@@ -38,7 +39,6 @@ antidote bundle ohmyzsh/ohmyzsh path:lib
 antidote bundle ohmyzsh/ohmyzsh path:plugins/yarn
 antidote bundle ohmyzsh/ohmyzsh path:plugins/fzf
 antidote bundle ohmyzsh/ohmyzsh path:plugins/aws
-antidote bundle ohmyzsh/ohmyzsh path:plugins/vi-mode
 
 antidote bundle zsh-users/zsh-syntax-highlighting
 antidote bundle zsh-users/zsh-autosuggestions
@@ -46,6 +46,7 @@ antidote bundle zsh-users/zsh-completions
 antidote bundle greymd/docker-zsh-completion
 antidote bundle chitoku-k/fzf-zsh-completions
 antidote bundle cowboyd/zsh-volta branch:v1
+antidote bundle jeffreytse/zsh-vi-mode
 
 # Make less show pretty colors for things
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
