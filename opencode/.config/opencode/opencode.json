@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "tokyonight_moon",
+  "theme": "system",
   "mcp": {
     "context7": {
       "type": "remote",

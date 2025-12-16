@@ -12,6 +12,17 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       servers = {
+        dockerls = {
+          settings = {
+            docker = {
+              languageserver = {
+                formatter = {
+                  ignoreMultilineInstructions = true,
+                },
+              },
+            },
+          },
+        },
         tailwindcss = {
           filetypes_include = { "templ" },
         },
