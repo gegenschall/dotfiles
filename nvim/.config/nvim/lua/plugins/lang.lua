@@ -40,9 +40,10 @@ return {
         vtsls = {
           settings = {
             typescript = {
+              tsserver = {
+                maxTsServerMemory = 8096,
+              },
               suggest = {
-                includeCompletionsForModuleExports = true,
-                includeCompletionsForImportStatements = true,
                 completeFunctionCalls = false,
               },
             },
