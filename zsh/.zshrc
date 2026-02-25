@@ -25,6 +25,7 @@ fi
 
 autoload -Uz compinit && compinit
 
+export CARAPACE_NOSPACE='*'
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
@@ -59,6 +60,7 @@ alias ls=eza
 alias sudo='sudo -E'
 alias j=z
 alias staplehorse='pwgen -cnyB 16 4'
+alias oc=opencode
 
 export VI_MODE_SET_CURSOR=true
 bindkey -v
